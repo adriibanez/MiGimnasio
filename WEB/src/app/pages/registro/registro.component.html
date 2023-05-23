@@ -1,0 +1,76 @@
+
+<div class="membresiaElegida" *ngIf="(membresiaElegida | json) != '{}'">Tu plan actual: {{membresiaElegida.nombre}} por {{membresiaElegida.precio}}€/mes</div>
+
+<div class="container-fluid p-3">
+
+<div class="row pb-5">
+  <h1 class="text-center pt-5">Elige una suscripción</h1>
+</div>
+
+   <div class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 d-flex justify-content-center">
+    <div class="col mb-3 me-3 colMembresia" *ngFor="let item of membresia">
+      <div class="card">
+        <h5 class="card-title text-center p-4">{{item.nombre}}</h5>
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+          <div class="col d-flex flex-row justify-content-center py-2" *ngFor="let ventaja of item.ventajas">
+                <p class="card-text text-center">-{{ ventaja.descripcion }}</p>
+          </div> 
+            <h5 class="card-title text-center p-4">{{item.precio |currency:'EUR'}}</h5>
+          </div>
+              <button mat-raised-button class="btn" (click)="elegirMembresia(item);irFormulario()">Elegir suscripción</button>
+        </div>
+    </div> 
+  </div> 
+
+
+
+  <div class="row mt-5" *ngIf="(membresiaElegida | json) != '{}'"  id="formulario">
+
+    <h1 class="text-center my-5">¡Solo un paso más!</h1>
+
+      <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()" class="d-flex flex-column"> 
+
+          <div class="mb-3">
+              <label for="userFormDni" class="form-label">DNI</label>
+              <input type="text" formControlName="dni" class="form-control" id="userFormDni" aria-describedby="dniHelp"  placeholder="15435981Z">
+              
+            </div>
+
+          <div class="mb-3">
+              <label for="userFormName" class="form-label">Nombre</label>
+              <input type="text" formControlName="name" class="form-control" id="userFormName" aria-describedby="nameHelp"  placeholder="Paco Angular">
+              
+            </div>
+
+          <div class="mb-3">
+            <label for="userFormEmail" class="form-label">Email</label>
+            <input type="text" formControlName="email" class="form-control" id="userFormEmail" aria-describedby="emailHelp"  placeholder="name@example.com">
+            
+          </div>
+
+          <div class="mb-3">
+              <label for="userFormPassword" class="form-label">Contraseña</label>
+              <input type="password" formControlName="password" class="form-control" id="userFormPassword" aria-describedby="passHelp" >
+              
+            </div>
+            <div class="mb-3">
+              <label for="userFormBirthDate" class="form-label">Fecha de nacimiento</label>
+              <input type="date" formControlName="fechaNacimiento" class="form-control" id="userFormDateBirth" aria-describedby="birthDateHelp">
+              
+            </div>
+
+            <div class="mb-3">
+              <label for="userFormNumIban" class="form-label">IBAN</label>
+                <input type="text" formControlName="numIban" class="form-control" id="userFormDateBirth" aria-describedby="ibanHelp">
+                              
+            </div>
+          
+          <button mat-raised-button type="submit" [disabled]="!addUserForm.valid" class="btnRegistro">Registrarse</button>
+
+          <!-- <div>{{error}}</div> -->
+        </form>
+      
+
+  </div>
+
+</div>

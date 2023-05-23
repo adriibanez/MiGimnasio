@@ -1,0 +1,67 @@
+*{padding: 0;
+    margin: 0;}
+
+    .container-fluid{
+        background-color: #e5dccb52;
+        }
+
+    h1{
+        padding-bottom: .4em;
+        font-family: 'TitanOne', cursive;
+    font-size: 2em;
+    color: #FFB427;
+    text-shadow: 2px 2px #2e2b2b;
+    }
+    .duda{
+        font-family: 'TitanOne', cursive;
+    font-size: 1em;
+    color: #FFB427;
+    text-shadow: 1px 1px #2e2b2b;
+    }
+
+    .rowContacto{
+        height: 100vh;
+    }
+
+.rowTitulo{
+    margin-top: 5em;
+    padding: 2em;
+}
+
+.mat-mdc-raised-button.mat-mdc-button-base{
+    width: 15em;
+    height: 2.4em;
+    font-size: 1em;
+    background-color: #FFB427;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+
+.map{
+    width: 100%;
+    height: 30em;
+}
+
+@media (min-width:768px ) { 
+    .container-fluid{
+        padding-top: 5em;
+    }
+
+    .rowContacto{
+        height: 50vh;
+    }
+
+    .rowTitulo{
+        margin-top: 2em;
+        padding: 2em;
+    }
+    h1{
+        font-size: 3em;
+
+    }
+    .duda{
+        font-size: 1.3em;
+
+    }
+    
+}

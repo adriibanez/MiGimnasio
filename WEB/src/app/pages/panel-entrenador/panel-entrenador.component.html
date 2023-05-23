@@ -1,0 +1,205 @@
+<div class="container-fluid pt-5">
+
+    <div class="row text-center">
+
+      <h1>Bienvenid@ {{infoStaff.name}}</h1>
+
+        <h1 class="fw-light">Panel de rutinas</h1>
+    
+    </div>
+
+    <div class="row text-center">
+
+      <div class="col">
+        <input type="text" (keyup)="filtrarPorNombre($event)" placeholder="Filtrar por nombre">
+
+
+          <!-- <input matInput type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp"  placeholder="nombre@gmail.com"> -->
+      </div>
+  
+  </div>
+    
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 rutinas">
+      <div class="col mb-5" *ngFor="let item of filteredRoutines">
+        <div class="card m-2">
+          <h5 class="card-title text-center p-4">{{item.nombre}}</h5>
+
+          <div class="card-body">
+            <div class="col d-flex flex-row justify-content-around py-2" *ngFor="let ejercicio of item.ejercicios">
+              <mat-divider></mat-divider>
+
+              <div class="d-flex flex-row justify-content-center">
+              <div class="d-flex flex-column justify-content-center">
+                
+              <div class="d-flex flex-row justify-content-center">
+                <p class="card-text text-center pe-1">{{ ejercicio.nombre }}</p>
+              </div>
+                
+              <div class="d-flex flex-row justify-content-center">
+                <p class="card-text text-center  pe-2">Series: {{ ejercicio.series }}</p>
+                <p class="card-text text-center pe-2">Reps: {{ ejercicio.repeticiones }}</p>
+                <p class="card-text text-center pe-2">D: {{ ejercicio.descanso }}</p>
+              </div>    
+              
+            </div>
+
+            <button class="btn"  (click)="eliminarEjercicioDeRutina(item.nombre,ejercicio.nombre)"><i class="material-icons deleteEjercicio">delete</i></button>
+
+            </div>
+
+            <mat-divider></mat-divider>
+
+            </div> 
+
+            <p class="card-title text-center">{{item.descripcion}}</p>
+
+            
+            <p class="card-title text-center ">Usuario: {{item.emailUser}}</p>
+            <p class="card-title text-center ">Entrenador: {{item.emailEmpleado}}</p>
+            </div>
+
+            <div class="d-flex flex-row justify-content-center align-items-center pt-2">
+              <button mat-raised-button class="btn btn-danger"  (click)="eliminarRutina(item.nombre)">Borrar rutina</button>
+              <button mat-raised-button  class="btn edit" (click)="updateRutina(item)"  ><i class="material-icons">mode_edit</i></button>
+            </div>
+                
+          </div>
+      </div> 
+    </div>
+    
+    
+    
+      
+    
+    <mat-tab-group dynamicHeight class=" d-flex justify-content-center">
+      <mat-tab label="Añade una rutina">
+        <div class="row mt-5 d-flex flex-column">
+    
+          <!-- <h1 class="text-center">Añade un plan alimenticio</h1> -->
+    
+            <form [formGroup]="addRutinaForm" (ngSubmit)="onSubmit()" class="d-flex justify-content-center flex-column align-items-center"> 
+    
+                <div class="mb-1">
+                    <!-- <label for="nombreFormMembresia" class="form-label">Nombre de la nueva rutina</label> -->
+                    <!-- <input type="text" formControlName="nombre" class="form-control" id="nombreFormMembresia" aria-describedby="nameHelp"  placeholder="Nombre de la nueva rutina"> -->
+                    <mat-form-field appearance="outline">
+                  <mat-label>Nombre de rutina</mat-label>
+                  <input matInput type="text" formControlName="nombre" class="form-control" id="nombreFormMembresia" aria-describedby="nameHelp"  placeholder="Nombre de la nueva rutina">
+                </mat-form-field>
+                  </div>
+    
+                <div class="mb-1">
+                    <!-- <label for="precioFormMembresia" class="form-label">Descripción</label>
+                    <input type="text" formControlName="descripcion" class="form-control" id="precioFormMembresia" aria-describedby="precioHelp"  placeholder="Descripción"> -->
+                    
+
+                    <mat-form-field appearance="outline">
+                      <mat-label>Descripción</mat-label>
+                      <input matInput type="text" formControlName="descripcion" class="form-control" id="precioFormMembresia" aria-describedby="Descripción"  placeholder="Descripción">
+                    </mat-form-field>
+                  </div>
+
+                    <!-- <div class="mb-3">
+                    <label for="emailUser" class="form-label">Email de usuario</label>
+                    <select name="emailUser" id="emailUser" formControlName="emailUser"  class="form-control">
+                      <option  *ngFor="let user of users" value={{user.email}}>{{user.email}}</option>
+
+                    </select>
+                  </div>  -->
+                  <div class="mb-1">
+                  <mat-form-field appearance="fill" >
+                    <mat-label>Email de usuario</mat-label>
+                    <mat-select formControlName="emailUser">
+                      <mat-option *ngFor="let user of users" value={{user.email}}>{{user.email}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <button mat-raised-button type="submit" [disabled]="!addRutinaForm.valid" class="btn ">Añadir rutina</button>
+    
+                <!-- <div>{{error}}</div> -->
+              </form>
+            
+        </div>
+      </mat-tab>
+      <mat-tab label="Añade ejercicios a una rutina">
+        <div class="row ">
+    
+          <!-- <h1 class="text-center">Añade comidas a un plan alimenticio</h1> -->
+    
+            <form [formGroup]="addEjerciciosForm" (ngSubmit)="onSubmitEjercicio()" class="d-flex flex-column"> 
+
+              <div class="mb-3">
+                <label for="nombreRutina" class="form-label">Nombre de la rutina</label>
+                <input type="text"   formControlName="nombreRutina" class="form-control" id="nombreRutina" aria-describedby="nombreRutinaHelp"  placeholder="Nombre de la rutina">
+              </div>
+              
+              <div class="mb-3">
+                  <label for="nombreEjercicio" class="form-label">Nombre del ejercicio</label>
+                  <input type="text"   formControlName="nombreEjercicio" class="form-control" id="nombreEjercicio" aria-describedby="nombreEjercicioHelp"  placeholder="Nombre del ejercicio">
+                </div>
+    
+                <div class="mb-3">
+                    <label for="series" class="form-label">Series</label>
+                    <input type="number"  formControlName="series" class="form-control" id="series" aria-describedby="series"  placeholder="Series">
+                  </div>
+    
+                  <div class="mb-3">
+                    <label for="repeticiones" class="form-label">Repeticiones</label>
+                    <input type="number"  formControlName="repeticiones" class="form-control" id="repeticionesForm" aria-describedby="repeticionesHelp"  placeholder="Repeticiones">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="descanso" class="form-label">Descanso en segundos</label>
+                    <input type="number"  formControlName="descanso" class="form-control" id="descansoForm" aria-describedby="descansoHelp"  placeholder="Descanso en segundos">
+                  </div>
+                  
+                <button mat-raised-button type="submit" [disabled]="!addEjerciciosForm.valid" class="btn ">Añadir ejercicio</button>
+    
+              </form>
+            
+    
+        </div>
+      </mat-tab>
+      <mat-tab label="Ver solicitudes">
+        <!-- ACORDEON SOLICITUDES -->
+        <div *ngIf="solicitudes.length === 0; else noSolicitudes">
+          <h1>NO HAY DATOS</h1>
+        </div>
+        <ng-template #noSolicitudes>
+        <mat-accordion class="example-headers-align" multi  >
+      
+          <mat-expansion-panel (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false" *ngFor="let item of solicitudes"[ngClass]="{
+            'estado-hecho':item.estado === 'Hecho',
+            'estado-pendiente':item.estado === 'Pendiente',
+            'estado-rechazada':item.estado === 'Rechazada'
+          }" class="m-3">
+        <mat-expansion-panel-header>
+        <mat-panel-title>
+        Fecha: {{item.fecha}}
+        </mat-panel-title>
+        <mat-panel-description >
+          Usuario: {{item.emailUsuario}}
+        </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>{{item.mensaje}}</p>
+        <p>Estado: {{item.estado}}</p>
+        <button color="success" mat-fab aria-label="DONE" (click)="checkDone(item)" >
+          <i class="material-icons">thumb_up</i>
+        </button>
+        <button mat-fab color="warn" aria-label="REFUSE"  (click)="refuse(item)" >
+          <mat-icon>delete</mat-icon>
+        </button>
+       
+        </mat-expansion-panel>
+        
+        </mat-accordion>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+    
+    
+    
+    </div>
+    
+    

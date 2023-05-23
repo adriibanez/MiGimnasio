@@ -1,0 +1,58 @@
+<div class="container-fluid">
+
+<!-- <div class="row rowTitulo">
+  <h1 class="text-center">¿Quieres contactar con nosotros?</h1>
+  <h2 class="text-center">Por favor, rellena este formulario</h2>
+</div> -->
+
+    <div class="row rowContacto row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 ">
+      
+      <div class="col">
+
+        <div class="row rowTitulo">
+          <h1 class="text-center">CONTACTO</h1>
+          <h1 class="text-center mb-1">¿Alguna duda?</h1>
+          <p class="duda text-center">Si tienes alguna consulta relacionada con nuestros servicios, puedes usar el siguiente formulario.</p>
+        </div>
+
+      </div>
+
+     
+      <div class="col p-5">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="d-flex flex-column justify-content-center "> 
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                <input type="text" formControlName="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  placeholder="Paco Angular">
+                
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  placeholder="name@example.com">
+              
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Asunto</label>
+              <input type="text" formControlName="asunto" class="form-control" id="exampleInputPassword1"  placeholder="Contacto">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                <textarea formControlName="mensaje" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escríbenos un mensaje..."></textarea>
+              </div>
+            <button mat-raised-button type="submit" [disabled]="!contactForm.valid" class="btn">Enviar</button>
+          </form>
+        </div>
+
+      
+
+    </div>
+
+    <div class="row">
+      <div class="col containerMap pb-5">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2081.250215768693!2d-2.4239029553179603!3d42.4632211504052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5aab73929fe14b%3A0x6fecd0e07f2ce4c6!2sFundaci%C3%B3n%20Cultural%20Recreativa%20Cantabria!5e0!3m2!1ses!2ses!4v1684267611925!5m2!1ses!2ses"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    
+
+</div>

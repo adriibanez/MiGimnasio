@@ -1,0 +1,39 @@
+<div class="container-fluid p-5">
+
+    <div class="row">
+      <div class="titulos text-center">
+
+        <img class="logo" src="../../../assets/images/logo.png" alt="Logo">
+
+        <h1 class="text-center">Inicia sesión como usuario</h1>
+      </div>
+
+        <form [formGroup]="userLoginForm" (ngSubmit)="onSubmit()" class="d-flex flex-column justify-content-center"> 
+
+            <div class="mb-3 d-flex justify-content-center">
+                <!-- <label for="email" class="form-label">Email</label> -->
+                <!-- <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp"  placeholder="nombre@gmail.com"> -->
+                <mat-form-field appearance="outline">
+                  <mat-label>Email</mat-label>
+                  <input matInput type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp"  placeholder="nombre@gmail.com">
+                </mat-form-field>
+              </div>  
+
+            <div class="mb-3 d-flex justify-content-center">
+                <!-- <label for="pass" class="form-label">Cotraseña</label>
+                <input type="password" formControlName="password" class="form-control" id="pass" aria-describedby="passHelp" >
+                 -->
+                <mat-form-field appearance="outline">
+                  <mat-label>Contraseña</mat-label>
+                  <input matInput type="password" formControlName="password" class="form-control" id="pass" aria-describedby="passHelp" >
+                </mat-form-field>
+              </div>
+            
+            <button  mat-raised-button type="submit" [disabled]="!userLoginForm.valid" class="btn ">Iniciar sesión</button>
+           
+          </form>
+          
+
+    </div>
+
+</div>

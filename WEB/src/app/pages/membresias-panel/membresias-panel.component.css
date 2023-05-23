@@ -1,0 +1,99 @@
+*{padding: 0;
+  margin: 0;
+}
+  
+
+  .container-fluid{
+  background-color: #e5dccb52;
+
+  }
+
+
+  .row{
+      padding: 1.5em;
+      margin-top: 1em;
+  }
+
+  .card{
+    padding: 1em;
+    font-size: 1.2em;
+    background-color:#ffb32791 ;
+    text-shadow: 1px 1px #ffffff;
+    box-shadow: 2px 2px #FFB427;
+    
+}
+  .deleteVentaja{
+    width: 1em;
+    height:.2em;
+    color: red;
+}
+h1{
+    font-family: 'TitanOne', cursive;
+  font-size: 2em;
+  color: #FFB427;
+  text-shadow: 2px 2px #2e2b2b;
+  }
+  
+  .membresias .edit.mat-mdc-raised-button.mat-mdc-button-base{
+    width: 7em;
+    height: 2.4em;
+    font-size: .6em;
+    background-color: #ffb327;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+
+
+.membresias .mat-mdc-raised-button.mat-mdc-button-base{
+    width: 7em;
+    height: 2.4em;
+    font-size: .6em;
+    background-color: #ff4027;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+  
+  .mat-mdc-raised-button.mat-mdc-button-base{
+    width: 15em;
+    height: 2.4em;
+    font-size: 1em;
+    background-color: #FFB427;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+  }
+
+  @media (min-width:821px ) { 
+
+    .card-title{
+        font-size: 1.2em;
+    }
+    h5{
+        font-size: 1.4em;
+    }
+
+    h1{
+      font-size: 3em;
+  }
+
+  .card-title{
+    font-size: 1.5em;
+}
+
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    form input{
+        width: 40em;
+    }
+}
+
+@media (min-width:1081px ) { 
+
+.membresias .btn-danger{
+  font-size: 3em;
+}
+}
+

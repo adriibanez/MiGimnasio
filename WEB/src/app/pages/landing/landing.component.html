@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row rowLanding">
+        <div class="titulo">
+            <h1 class="text-center pb-2">¡Ponte en forma rápidamente!</h1>
+            <h2 class="subtitulo text-center">Empieza ya en Mi Gimnasio, </h2>
+            <span class="subtitulo text-center">¿a que estás esperando?</span>
+        </div>
+
+        <div class="buttons">
+            <button mat-raised-button [routerLink]="[ '/userRegister' ]"><span>¡Hazte miembro!</span></button>
+            <button mat-raised-button [routerLink]="[ '/contact' ]"><span>¡Contáctanos!</span></button>
+            <button mat-raised-button (click)="irDescarga()"><span>Descarga la app</span></button>
+
+        </div>
+    </div>
+    <div class="row rowApp" id="descargar">
+        <div class="tituloDescargas text-center">
+            <h1>Sin excusas desde el móvil</h1>
+            <h1>Próximamente...</h1>
+
+            <div class="iconDescargas" >
+                <img class="android" src="../../../assets/images/googlePlay.svg" alt="Descarga android">  
+                <img class="ios" src="../../../assets/images/ios.svg" alt="Descarga ios"> 
+               </div>
+        </div>
+       
+        
+  </div>
+
+
+</div>

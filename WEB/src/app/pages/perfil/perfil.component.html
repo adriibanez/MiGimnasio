@@ -1,0 +1,165 @@
+
+<div class="container-fluid pt-5">
+
+  <div class="row text-center ">
+    <h1>Bienvenid@ {{infoUser.name}}</h1>
+
+  </div>
+
+  <div class="row">
+    <mat-tab-group dynamicHeight>
+      <mat-tab label="Datos personales">
+        <div class="card text-center">
+          <div class="card-body ">
+            <p class="card-text">Dni: {{infoUser.dni}}</p>
+            <p class="card-text">Email: {{infoUser.email}}</p>
+            <p class="card-text">Fecha de nacimiento. {{infoUser.fechaNacimiento}}</p>
+            <p class="card-text">Fecha de inscripción: {{infoUser.fechaInscripcion}}</p>
+            <p class="card-text">Membresía: {{infoUser.membresia}}</p>
+            <p class="card-text">IBAN: {{infoUser.numIban}}</p>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Cambiar de plan">
+        <div class="card text-center">
+          <div class="card-body">
+            <p class="card-text">Membresía actual: {{infoUser.membresia}}</p>
+    
+            <form [formGroup]="membresiaForm" (ngSubmit)="onSubmitCambiarMembresia()">
+
+              <div class="mb-3">
+                <mat-form-field appearance="fill" required>
+                  <mat-label>Elige tu nueva membresía</mat-label>
+                  <mat-select formControlName="membresiaChange">
+                    <mat-option  *ngFor="let membresia of membresias" value={{membresia.nombre}}>{{membresia.nombre}} {{membresia.precio | currency:'EUR'}}/Mes</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+              <button mat-raised-button class="btn" type="submit">Cambiar de membresía</button>
+            </form>
+    
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Mis rutinas">
+    
+          <!-- ACORDEON RUTINAS -->
+          <mat-accordion class="example-headers-align" multi>
+    
+            <mat-expansion-panel (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false" *ngFor="let item of rutinas">
+          <mat-expansion-panel-header>
+          <mat-panel-title>
+          {{item.nombre}}
+          </mat-panel-title>
+          <mat-panel-description >
+            {{item.descripcion}}
+          </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div *ngFor="let ejercicio of item.ejercicios">
+    
+            <p>Ejercicio: {{ejercicio.nombre}} Series: {{ejercicio.series}} Reps: {{ejercicio.repeticiones}} Descanso: {{ejercicio.descanso}}s</p>
+          </div>
+          </mat-expansion-panel>
+          
+          </mat-accordion>
+    
+      </mat-tab>
+      <mat-tab label="Mis dietas">
+           <!-- ACORDEON PLANNINGS -->
+           <mat-accordion class="example-headers-align" multi>
+    
+            <mat-expansion-panel (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false" *ngFor="let item of plannings">
+          <mat-expansion-panel-header>
+          <mat-panel-title>
+          {{item.nombre}}
+          </mat-panel-title>
+          <mat-panel-description >
+            {{item.descripcion}}
+          </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div *ngFor="let comida of item.comidas">
+    
+            <p>Comida: {{comida.nombre}} {{comida.calorias}}kcal</p>
+            <p>{{comida.descripcion}}  </p>
+           
+          </div>
+          </mat-expansion-panel>
+          
+          </mat-accordion>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <div class="row my-5" *ngIf="infoUser.membresia === 'Premium'">
+
+    <div class="col text-center">
+      <h1>Disfruta de tu plan premium</h1>
+  
+    </div>
+
+    <mat-tab-group dynamicHeight >
+      <mat-tab label="Pedir solicitud">
+        <div class="card text-center">
+          <div class="card-body">
+            <p class="card-text">Datos de la solicitud: </p>
+    
+            <form [formGroup]="solicitudForm" (ngSubmit)="onSubmitSolicitud()" class="d-flex flex-column align-items-center">
+              <div class="mb-3" >
+                <div class="mb-1">
+                  <mat-form-field appearance="fill" >
+                    <mat-label>Email de empleado</mat-label>
+                    <mat-select formControlName="emailEmpleado" required>
+                      <mat-option *ngFor="let staff of staff" value={{staff.email}}>{{staff.name}} {{staff.cargo}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="mb-1">
+                  <label for="mensajeSolicitud" class="form-label">Mensaje de solicitud</label>
+                  <input type="text" formControlName="mensaje" class="form-control" id="mensajeSolicitud" aria-describedby="mensajeSolicitud"  placeholder="Solicitar rutina de pectoral">
+                  
+                </div>
+              </div>
+              <button mat-raised-button type="submit" [disabled]="!solicitudForm.valid" class="btn">Solicitar</button>
+            </form>
+    
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Mis solicitudes">
+    
+          <!-- ACORDEON SOLICITUDES -->
+          <mat-accordion class="example-headers-align" multi>
+    
+            <mat-expansion-panel (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false" *ngFor="let item of solicitudes" [ngClass]="{
+              'estado-hecho':item.estado === 'Hecho',
+              'estado-pendiente':item.estado === 'Pendiente',
+              'estado-rechazada':item.estado === 'Rechazada'
+            }">
+          <mat-expansion-panel-header>
+          <mat-panel-title>
+          Fecha: {{item.fecha}}
+          </mat-panel-title>
+          <mat-panel-description >
+            Empleado: {{item.emailEmpleado}}
+          </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>{{item.mensaje}}</p>
+          <p>Estado: {{item.estado}}</p>
+          </mat-expansion-panel>
+          
+          </mat-accordion>
+    
+      </mat-tab>
+
+    </mat-tab-group>
+  </div>
+
+
+
+
+
+</div>

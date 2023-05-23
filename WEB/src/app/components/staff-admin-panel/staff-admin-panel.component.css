@@ -1,0 +1,65 @@
+*{padding: 0;
+  margin: 0;
+}
+  
+
+  .row{
+      /* padding: 1.5em; */
+      margin-top: 1em;
+  }
+
+h1{
+  font-family: 'TitanOne', cursive;
+font-size: 2em;
+color: #FFB427;
+text-shadow: 2px 2px #2e2b2b;
+}
+
+.deleteStaff{
+  width: 1em;
+        height:.2em;
+        color: red;
+}
+
+.filtro{
+  margin-right: 1em;
+}
+
+
+
+.mat-mdc-raised-button.mat-mdc-button-base{
+  width: 15em;
+  height: 2.4em;
+  font-size: 1em;
+  background-color: #FFB427;
+  color: rgb(255, 255, 255);
+  margin: 0 auto;
+}
+
+
+.table-container {
+    width: 100%;
+    overflow: auto;
+    height: 30em; 
+  }
+.mat-mdc-table {
+    width: 100%;
+    max-height: 500px;
+    overflow: auto;
+  }
+  
+  .mat-column-name {
+    height: 100px;
+  }
+
+  .mat-mdc-table .mdc-data-table__header-row {
+    height: 56px;
+    background-color: rgba(255, 174, 0, 0.658);
+}
+
+@media (min-width:821px ) { 
+
+  h1{
+      font-size: 2.5em;
+  }
+}

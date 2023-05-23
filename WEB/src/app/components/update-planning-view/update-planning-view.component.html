@@ -1,0 +1,28 @@
+<div class="container-fluid mt-5 d-flex flex-column justify-content-center align-items-center">
+
+<div class="row d-flex flex-column justify-content-center align-items-center p-5 pt-5">
+
+  <h1 class="text-center">Modifica el planning elegido</h1>
+
+
+        <form [formGroup]="updatePlanningForm" (ngSubmit)="saveChanges()" class="d-flex flex-column justify-content-center align-items-center pt-5">
+
+            <div class="mb-3">
+                <mat-form-field appearance="outline">
+                    <mat-label>Nombre del planning</mat-label>
+                    <input matInput placeholder="Placeholder" formControlName="nombre">
+                  </mat-form-field>
+            </div>
+
+            <div class="mb-3">
+                <mat-form-field appearance="outline">
+                    <mat-label>Descripción del planning</mat-label>
+                    <input matInput placeholder="Placeholder" formControlName="descripcion">
+                  </mat-form-field>
+            </div>
+
+            <button mat-raised-button class="btn" type="submit">Guardar cambios</button>
+          </form>
+
+  </div>
+</div>

@@ -1,0 +1,16 @@
+h1{
+    font-family: 'TitanOne', cursive;
+  font-size: 2.5em;
+  color: #FFB427;
+  text-shadow: 2px 2px #2e2b2b;
+  }
+
+  
+.mat-mdc-raised-button.mat-mdc-button-base{
+    width: 15em;
+    height: 2.4em;
+    font-size: 1em;
+    background-color: #FFB427;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+  }

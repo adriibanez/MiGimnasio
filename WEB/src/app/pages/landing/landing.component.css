@@ -1,0 +1,115 @@
+*{padding: 0;
+margin: 0;}
+
+.rowLanding{
+    height: 100vh;
+    margin-top: 3.5em;
+    background-image: url("../../../assets/images/landing.jpg");
+    background-repeat: no-repeat;
+    background-position: 9%;
+    background-size: cover;
+    padding: 2em;
+}
+
+h1{
+    font-family: 'TitanOne', cursive;
+    font-size: 2em;
+    color: #FFB427;
+    text-shadow: 2px 2px #2e2b2b;
+}
+
+.subtitulo{
+    font-family: 'TitanOne', cursive;
+    font-size: 1em;
+    color: #FFB427;
+    text-shadow: 2px 2px #2e2b2b;
+}
+
+
+
+.titulo{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFB427;
+
+}
+
+
+.buttons{
+    margin-top: 10em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mat-mdc-raised-button.mat-mdc-button-base{
+    width: 7.5em;
+    height: 3.3em;
+    font-size: .7em;
+    background-color: #FFB427;
+    color: rgb(255, 255, 255);
+}
+
+.rowApp{
+    height: 50vh;
+    background-image: linear-gradient(to bottom, #303b4c, #614c70, #a45775, #d36f5b, #d6a03b);
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.iconDescargas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+.android{
+    width: 10em;
+}
+
+.ios{
+    width: 8em;
+}
+
+
+@media (min-width:600px) { 
+    .mat-mdc-raised-button.mat-mdc-button-base{
+        width: 10em;
+        height: 20%;
+        font-size: 1em;
+    }
+
+    .tituloDescargas{
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #FFB427;
+    
+    }
+}
+
+
+@media (min-width:991px) { 
+    .mat-mdc-raised-button.mat-mdc-button-base{
+        width: 20%;
+        height: 25%;
+        font-size: 1.3em;
+        font-weight: bolder;
+        background-color: #ffb327;
+    }
+
+    .titulo{
+        padding-top: 2em;
+        font-size: 1.6em;
+    }
+    
+    .tituloDescargas{
+        margin-top: 1.6em;    
+    }
+}

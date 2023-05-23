@@ -1,0 +1,97 @@
+<div class="container-fluid pt-5">
+
+<div class="row p-4 text-center">
+
+    <h1 class="fw-light">Panel de membresías</h1>
+
+</div>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-3 membresias">
+  <div class="col mb-5" *ngFor="let item of membresia">
+    
+    <div class="card m-2">
+      <h5 class="card-title text-center p-4">{{item.nombre}}</h5>
+      <div class="card-body">
+        <div class="col d-flex  flex-row justify-content-around" *ngFor="let ventaja of item.ventajas">
+          <mat-divider></mat-divider>
+    
+          <p class="card-text text-center pe-1">{{ ventaja.descripcion }}</p>
+              <button class="btn " (click)="eliminarVentajaDeMembresia(item.nombre,ventaja.descripcion)"><i class="material-icons deleteVentaja">delete</i></button>
+        </div> 
+        <mat-divider></mat-divider>
+
+          <h5 class="card-title text-center p-4">{{item.precio|currency:'EUR'}}</h5>
+        </div>
+        <div class="d-flex flex-row justify-content-center align-items-center pt-2">
+            <button mat-raised-button  class="btn btn-danger"  (click)="eliminarMembresia(item.nombre)">Borrar suscripción</button>
+            <button mat-raised-button  class="btn edit" (click)="updateMembresia(item)"  ><i class="material-icons">edit</i></button>
+          </div>
+      </div>
+  </div> 
+</div>
+
+
+<mat-tab-group dynamicHeight >
+  <mat-tab label="Añade una suscripción">
+    <div class="row mt-5 ">
+
+      <!-- <h1 class="text-center">Añade un plan alimenticio</h1> -->
+
+        <form [formGroup]="addMembresiaForm" (ngSubmit)="onSubmit()" class="d-flex  flex-column"> 
+
+            <div class="mb-3">
+                <label for="nombreFormMembresia" class="form-label">Nombre de la nueva suscripción</label>
+                <input type="text" formControlName="nombre" class="form-control" id="nombreFormMembresia" aria-describedby="nameHelp"  placeholder="Nombre de la suscripción">
+                
+              </div>
+
+            <div class="mb-3">
+                <label for="precioFormMembresia" class="form-label">Precio mensual</label>
+                <input type="number" formControlName="precio" class="form-control" id="precioFormMembresia" aria-describedby="precioHelp"  placeholder="100">
+                
+              </div>
+
+          
+
+            <button mat-raised-button type="submit" [disabled]="!addMembresiaForm.valid" class="btn">Añadir suscripción</button>
+
+            <!-- <div>{{error}}</div> -->
+          </form>
+        
+    </div>
+  </mat-tab>
+  <mat-tab label="Añade ventajas a la suscripción">
+    <div class="row mt-5">
+
+      <!-- <h1 class="text-center">Añade comidas a un plan alimenticio</h1> -->
+
+        <form [formGroup]="addVentajasForm" (ngSubmit)="onSubmitVentaja()" class="d-flex  flex-column"> 
+
+          
+          <div class="mb-3">
+              <label for="nombreMembresia" class="form-label">Nombre de la suscripción existente</label>
+              <input type="text"   formControlName="nombreMembresia" class="form-control" id="nombreMembresia" aria-describedby="nombreMembresiaHelp"  placeholder="Nombre de la membresía">
+              <!-- [(ngModel)]="nombreMembresia" -->
+            </div>
+
+            <div class="mb-3">
+                <label for="ventajaForm" class="form-label">Ventaja</label>
+                <input type="text"  formControlName="descripcion" class="form-control" id="ventajaForm" aria-describedby="ventajaHelp"  placeholder="Ventaja">
+                <!-- [(ngModel)]="ventaja"  -->
+              </div>
+
+              
+            <button mat-raised-button type="submit" [disabled]="!addVentajasForm.valid" class="btn">Añadir ventaja</button>
+
+          </form>
+        
+
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+
+
+
+</div>
+

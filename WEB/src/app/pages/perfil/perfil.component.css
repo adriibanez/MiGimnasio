@@ -1,0 +1,96 @@
+*{padding: 0;
+    margin: 0;
+}
+    
+
+    .container-fluid{
+    background-color: #e5dccb52;
+
+    }
+
+
+
+    .row{
+        padding: 1.5em;
+        margin-top: 1em;
+    }
+
+    h1{
+        padding-bottom: .4em;
+        font-family: 'TitanOne', cursive;
+    font-size: 2em;
+    color: #ffc75e;
+    text-shadow: 2px 2px #2e2b2b;
+    }
+
+    .mat-mdc-raised-button.mat-mdc-button-base{
+        height: 2.4em;
+        font-size: 1em;
+        background-color: #ffb327c9;
+        color: rgb(255, 255, 255);
+    }
+
+
+  .card{
+    padding: 2em;
+    background-color: #fad48e9d;
+    max-width: 30em;
+  }
+
+  .card p{
+    margin-bottom: .4em;
+  }
+
+
+.estado-hecho{
+    background-color: rgb(85, 207, 54);
+}
+.estado-pendiente{
+background-color: #FFB427;
+}
+.estado-rechazada{
+    background-color: rgb(179, 78, 65);
+}
+
+@media (min-width:527px ) { 
+
+    h1{
+        font-size: 2.5em;
+    }
+
+.card{
+    max-width: 70%;
+    width: 70%;
+    margin:0 auto;
+}
+
+#mensajeSolicitud{
+    width: 20em;
+}
+
+/* .card p{
+    font-size: 1.5em;
+} */
+
+
+}
+
+@media (min-width:1023px ) { 
+
+    h1{
+        font-size: 2.5em;
+    }
+
+.card{
+    max-width: 70%;
+    width: 70%;
+    margin:0 auto;
+}
+
+.card p{
+    font-size: 1.5em;
+} 
+
+
+}
+

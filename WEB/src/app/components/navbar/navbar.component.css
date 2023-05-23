@@ -1,0 +1,58 @@
+/* @media screen {
+    
+    .container{
+        max-width: 100% !important; 
+
+    }
+} */
+
+img{
+    width:100px;
+     height:35px;
+}
+
+nav{
+    background-color: #333333;
+    
+}
+
+.mat-mdc-raised-button.mat-mdc-button-base{
+    width: 13em;
+    height: 2.4em;
+    font-size: 1em;
+    background-color: #FFB427;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+  }
+
+nav a{
+    color: white;
+    
+}
+
+nav ul a{
+    color: #FFB427;
+    font-size: 1.2em;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1) brightness(1) ;
+}
+
+@media (min-width:991px ) { 
+    .nav-item{
+        font-size: .7em;
+    }
+}
+
+@media (min-width:1149px) { 
+    .nav-item{
+        font-size: 1em;
+    }
+}
+
+@media (min-width:1170px) { 
+    .nav-item{
+        font-size: 1.1em;
+    }
+}

@@ -1,0 +1,201 @@
+<div class="container-fluid pt-5">
+
+
+
+    
+  <div class="row p-4 text-center">
+    <h1>Bienvenid@ {{infoStaff.name}}</h1>
+      <h1 class="fw-light">Panel nutricional</h1>
+  
+  </div>
+
+  <div class="row p-4 text-center">
+
+    <div class="col">
+      <input type="text" (keyup)="filtrarPorNombre($event)" placeholder="Filtrar por nombre" class="filtro">
+    </div>
+
+</div>
+  
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 plannings">
+    <div class="col mb-5" *ngFor="let item of filteredPlannings">
+      <div class="card m-2">
+        <h5 class="card-title text-center p-4">{{item.nombre}}</h5>
+        <div class="card-body">
+          <div class="col d-flex flex-column flex-row justify-content-around py-2" *ngFor="let comida of item.comidas">
+            <mat-divider></mat-divider>
+
+            <div class="d-flex flex-row justify-content-center">
+            <div class="d-flex flex-column justify-content-center">
+              
+            <div class="d-flex flex-row justify-content-center">
+              <p class="card-text text-center pe-1">{{ comida.nombre }} {{ comida.calorias }} kcal</p>
+            </div>
+              
+            <div class="d-flex flex-row justify-content-center">
+              <p class="card-text text-center pe-2"> {{ comida.descripcion }}</p>
+            </div>    
+            
+          </div>
+
+          <button class="btn"  (click)="eliminarComidaDePlanning(item.nombre,comida.nombre)"><i class="material-icons deleteComida">delete</i></button>
+
+          </div>
+
+          <mat-divider></mat-divider>
+
+          </div> 
+          <p class="card-title text-center">{{item.descripcion}}</p>
+
+          
+          <p class="card-title text-center ">Usuario: {{item.emailUser}}</p>
+          <p class="card-title text-center ">Nutricionista: {{item.emailEmpleado}}</p>
+          </div>
+          <div class="d-flex flex-row justify-content-center align-items-center pt-2">
+
+              <button mat-raised-button class="btn btn-danger"  (click)="eliminarPlanning(item.nombre)">Borrar planning</button>
+              <button mat-raised-button class="btn edit" (click)="updatePlanning(item)"  ><i class="material-icons">mode_edit</i></button>
+            </div>
+
+            </div>
+    </div> 
+  </div>
+  
+  
+  
+    
+  
+  <mat-tab-group dynamicHeight class=" d-flex flex-column">
+    <mat-tab label="Añade un planning">
+      <div class="row mt-5 ">
+  
+        <!-- <h1 class="text-center">Añade un plan alimenticio</h1> -->
+  
+          <form [formGroup]="addPlanningForm" (ngSubmit)="onSubmit()" class="d-flex justify-content-center flex-column align-items-center"> 
+  
+              <div class="mb-1">
+                  <!-- <label for="nombreFormMembresia" class="form-label">Nombre del nuevo planning</label>
+                  <input type="text" formControlName="nombre" class="form-control" id="nombreFormMembresia" aria-describedby="nameHelp"  placeholder="Nombre del nuevo planning"> -->
+                  
+
+                  <mat-form-field appearance="outline">
+                    <mat-label>Nombre del nuevo planning</mat-label>
+                    <input matInput type="text" formControlName="nombre" class="form-control" id="nombreFormMembresia" aria-describedby="nameHelp"  placeholder="Nombre del nuevo planning">
+                  </mat-form-field>
+                </div>
+  
+              <div class="mb-1">
+                  <!-- <label for="precioFormMembresia" class="form-label">Descripción</label>
+                  <input type="text" formControlName="descripcion" class="form-control" id="precioFormMembresia" aria-describedby="precioHelp"  placeholder="Descripción"> -->
+                  
+
+                  <mat-form-field appearance="outline">
+                    <mat-label>Descripción</mat-label>
+                    <input matInput type="text" formControlName="descripcion" class="form-control" id="precioFormMembresia" aria-describedby="precioHelp"  placeholder="Descripción">
+                  </mat-form-field>
+                </div>
+
+                <!-- <div class="mb-3">
+                  <label for="emailUser" class="form-label">Email de usuario</label>
+                  <select name="emailUser" id="emailUser" formControlName="emailUser"  class="form-control">
+                    <option  *ngFor="let user of users" value={{user.email}}>{{user.email}}</option>
+
+                  </select>
+                  </div> -->
+
+                <div class="mb-1">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Email de usuario</mat-label>
+                    <mat-select formControlName="emailUser">
+                      <mat-option *ngFor="let user of users" value={{user.email}}>{{user.email}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+  
+            
+  
+              <button mat-raised-button type="submit" [disabled]="!addPlanningForm.valid" class="btn">Añadir planning</button>
+  
+              <!-- <div>{{error}}</div> -->
+            </form>
+          
+      </div>
+    </mat-tab>
+    <mat-tab label="Añade comidas a un planning">
+      <div class="row mt-5">
+  
+        <!-- <h1 class="text-center">Añade comidas a un plan alimenticio</h1> -->
+  
+          <form [formGroup]="addComidasForm" (ngSubmit)="onSubmitComida()" class="d-flex flex-column"> 
+
+            <div class="mb-3">
+              <label for="nombrePlanning" class="form-label">Nombre del planning</label>
+              <input type="text"   formControlName="nombrePlanning" class="form-control" id="nombrePlanning" aria-describedby="nombrePlanningHelp"  placeholder="Nombre del planning">
+            </div>
+            
+            <div class="mb-3">
+                <label for="nombreComida" class="form-label">Nombre del comida</label>
+                <input type="text"   formControlName="nombreComida" class="form-control" id="nombreComida" aria-describedby="nombreComidaHelp"  placeholder="Nombre de la comida">
+              </div>
+  
+              <div class="mb-3">
+                  <label for="calorias" class="form-label">Calorías(kcal)</label>
+                  <input type="number"  formControlName="calorias" class="form-control" id="calorias" aria-describedby="calorias"  placeholder="Número de calorías">
+                </div>
+
+                <div class="mb-3">
+                  <label for="descripcion" class="form-label">Descripción de la comida</label>
+                  <input type="text"  formControlName="descripcion" class="form-control" id="descripcion" aria-describedby="descripcion"  placeholder="Descripción de la comida">
+                </div>
+                
+              <button mat-raised-button type="submit" [disabled]="!addComidasForm.valid" class="btn">Añadir comida</button>
+  
+            </form>
+          
+  
+      </div>
+    </mat-tab>
+    <mat-tab label="Ver solicitudes">
+      <div *ngIf="solicitudes.length === 0; else noSolicitudes">
+        <h1>NO HAY DATOS</h1>
+      </div>
+      <ng-template #noSolicitudes>
+       
+      <!-- ACORDEON SOLICITUDES -->
+      <mat-accordion class="example-headers-align" multi  >
+      
+        <mat-expansion-panel (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false" *ngFor="let item of solicitudes"[ngClass]="{
+          'estado-hecho':item.estado === 'Hecho',
+          'estado-pendiente':item.estado === 'Pendiente',
+          'estado-rechazada':item.estado === 'Rechazada'
+        }" class="m-3">
+      <mat-expansion-panel-header>
+      <mat-panel-title>
+      Fecha: {{item.fecha}}
+      </mat-panel-title>
+      <mat-panel-description >
+        Usuario: {{item.emailUsuario}}
+      </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>{{item.mensaje}}</p>
+        <p>Estado: {{item.estado}}</p>
+      <button color="success" mat-fab aria-label="DONE" (click)="checkDone(item)" >
+         <i class="material-icons">thumb_up</i>
+      </button>
+      <button mat-fab color="warn" aria-label="REFUSE"  (click)="refuse(item)" >
+        <mat-icon>delete</mat-icon>
+      </button>
+     
+      </mat-expansion-panel>
+      
+      </mat-accordion>
+    </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+  
+  
+  
+  </div>
+  
+  

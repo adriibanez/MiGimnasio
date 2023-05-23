@@ -1,0 +1,37 @@
+footer{
+    background-color: #ffb327d0;
+}
+
+.footerLove{
+    font-size: 1em;
+}
+
+.footerLove img{
+    width: 3em;
+}
+
+a{
+    font-size: 1.3em;
+}
+
+.logoFooter{
+    box-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+.footerLove .like{
+    width: 1.5em;
+}
+
+@media (min-width:865px ) { 
+    .logoFooter{
+        width: 10em;
+        height: 3em;
+    }
+    h5{
+        font-size: 1.7em;
+    }
+
+    a{
+        font-size: 1.5em;
+    }
+}

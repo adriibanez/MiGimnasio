@@ -1,0 +1,80 @@
+
+*{padding: 0;
+    margin: 0;}
+
+    .container-fluid{
+        background-color: #e5dccb52;
+    }
+
+    h1{
+        font-family: 'TitanOne', cursive;
+        font-size: 2em;
+        color: #FFB427;
+        text-shadow: 2px 2px #2e2b2b;
+    }
+    .row{
+        padding: .5em;
+        margin-top: 1em;
+    }
+
+    .mat-mdc-raised-button.mat-mdc-button-base{
+        height: 2.4em;
+        font-size: 1em;
+        background-color: #FFB427;
+        color: rgb(255, 255, 255);
+    }
+
+    .colMembresia{
+        min-width: 13em; 
+        max-width: 25em; 
+    }
+
+    .card{
+        min-height: 15em;
+    }
+
+.membresiaElegida{
+    padding: .3em;
+    width: 100%;
+    max-height: 3em;
+    background-color: #302c2c7c;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 1em;
+    text-align: center;
+    font-size: 1.4em;
+    z-index: 99;
+}
+
+.btnRegistro{
+        width: 15em;
+        height: 2.4em;
+        font-size: 1em;
+        background-color: #FFB427;
+        color: rgb(255, 255, 255);
+        margin: 0 auto;
+    
+}
+
+
+@media (min-width:821px ) { 
+
+    .card-title{
+        font-size: 1.5em;
+    }
+
+
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    form input{
+        width: 40em;
+    }
+
+    h1{
+        font-size: 3em;
+    }
+}

@@ -1,0 +1,79 @@
+
+
+
+
+.card{
+    box-shadow: 2px 2px rgb(224, 169, 16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+img{
+    width: 10em;
+}
+
+.card-title{
+    font-size: 3em;
+    font-family: 'TitanOne', cursive;
+    color: #FFB427;
+    text-shadow: 2px 2px #2e2b2b;
+}
+
+.card-text{
+    font-family: 'TitanOne', cursive;
+    font-size: 1em;
+    color: #FFB427;
+    text-shadow: 2px 2px #2e2b2b;
+}
+
+.mat-mdc-raised-button.mat-mdc-button-base{
+    margin-top: 1em;
+    width: 7em;
+    height: 1.5em;
+    font-size: 1.4em;
+    background-color: #FFB427;
+    color: rgb(255, 255, 255);
+}
+
+@media (min-width:698px) { 
+    .card{
+       width: 70%;
+    }
+
+    img{
+        width: 37%;
+    }
+
+    .card-title{
+        font-size: 5em;
+    }
+    .card-text{
+        font-size: 1.5em;
+    }
+    
+}
+
+@media (min-width:1197px) { 
+    .card{
+       width: 70%;
+    }
+
+    img{
+        width: 27%;
+    }
+
+    .card-title{
+        font-size: 5em;
+    }
+    .card-text{
+        font-size: 2em;
+    }
+    
+}

@@ -1,0 +1,60 @@
+*{padding: 0;
+    margin: 0;}
+
+    .container-fluid{
+        height: 100vh;
+        background-color: #e5dccb52; 
+    }
+
+
+    .row{
+        padding: .5em;
+    }
+    h1{
+        font-family: 'TitanOne', cursive;
+    font-size: 2em;
+    color: #FFB427;
+    text-shadow: 2px 2px #2e2b2b;
+    }
+
+    .titulos{
+        margin-top: 5em;
+        margin-bottom: 3em;
+    }
+
+
+    .logo{
+        width: 10em;
+        height: 3em;
+        margin-bottom: 3em;
+    }
+
+    
+
+    .email,.pass{
+        width: 15em;
+    }
+
+
+    .mat-mdc-raised-button.mat-mdc-button-base{
+        width: 15em;
+        height: 2.4em;
+        font-size: 1em;
+        background-color: #FFB427;
+        color: rgb(255, 255, 255);
+        margin: 0 auto;
+    }
+    .mat-label{
+        color: #ff0000;
+    }
+    .placeholder {
+        color: rgb(241, 19, 19) ;
+      }
+      /* Border */
+      .mat-form-field-appearance-outline .mat-form-field-outline {
+        color: rgb(255, 255, 255) ;
+      }
+      /* Font color */
+      input.mat-input-element {
+        color: rgb(255, 255, 255) ;
+      }

@@ -1,0 +1,94 @@
+
+*{padding: 0;
+    margin: 0;}
+
+.container-fluid{
+    margin-top: 3.5em;
+    background-image: url("../../../assets/images/entrenador.png");
+    background-color: #e5dccb52;
+    background-repeat: no-repeat;
+        /* background-position: top; para escritorio*/
+    background-position: 60%;
+    background-size: cover;
+}
+    
+.titulo{
+    padding-bottom: .4em;
+        font-family: 'TitanOne', cursive;
+    font-size: 2em;
+    color: #FFB427;
+    text-shadow: 2px 2px #2e2b2b;
+}
+.subtitulo{
+    padding-bottom: .4em;
+        font-family: 'TitanOne', cursive;
+    font-size: .8em;
+    color: #ffc75e;
+    text-shadow:2px 2px #2e2b2b;
+}
+
+/* h5{
+    padding-bottom: .4em;
+        font-family: 'TitanOne', cursive;
+    font-size: 1.em;
+    color: #FFB427;
+    text-shadow: 2px 2px #2e2b2b;
+} */
+
+    .row{
+        padding: .5em;
+        margin-top: 1em;
+    }
+    .caract{
+        margin-bottom: 1em;
+    }
+
+    .caract img{
+        width: 3em;
+        border-radius: 100px;
+        border: 2px solid #FFB427;
+    }
+
+    .caract h5{
+        padding-bottom: .4em;
+        font-family: 'TitanOne', cursive;
+    font-size: .8em;
+    color: #ffc75e;
+    text-shadow: 1px 1px #2e2b2b;
+    }
+
+    .caract p{
+        padding-bottom: .4em;
+        font-family: 'TitanOne', cursive;
+    font-size: .5em;
+    color: #ffc75e;
+    text-shadow: 1px 1px #2e2b2b;
+    }
+
+
+    @media (min-width:821px ) { 
+        .container-fluid{
+            background-position: top;
+        }
+        
+        .titulo{
+            font-size: 3em;
+        }
+        .subtitulo{
+            font-size: 1.7em;
+        }
+        .caract img{
+            width: 5em;
+            ;
+        }
+    
+        .caract h5{
+            padding-bottom: .4em;
+        font-size: 1.4em;
+        }
+    
+        .caract p{
+        font-size: 1em;
+        }
+        
+    }

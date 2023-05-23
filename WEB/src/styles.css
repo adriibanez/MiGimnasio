@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+
+@font-face {
+  font-family: TitanOne;
+  src: url(assets/font/TitanOne-Regular.ttf) format("opentype");
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #FFB427;
+  }
+  
+.orange-snackbar {
+  --mdc-snackbar-supporting-text-size:1em !important;
+      --mdc-snackbar-container-color: #FFB427 !important;
+      --mat-mdc-snack-bar-button-color: #fff !important;
+      --mdc-snackbar-supporting-text-color: #ffffff !important;
+      margin:auto;
+      text-align: center;
+      
+    }
+
+    
+
+
+  
