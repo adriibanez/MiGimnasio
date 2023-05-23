@@ -1,0 +1,179 @@
+<mxfile host="app.diagrams.net" modified="2023-05-19T07:46:54.848Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="95aRi03ibBzGYLtRsdcA" version="21.3.2" type="device" pages="3">
+  <diagram name="MÓVIL" id="GzIrJ0NVv1-dBbwNnHGu">
+    <mxGraphModel dx="2868" dy="1592" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="660" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6Csn6PeNjJlUG7g1r4Jb-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry width="660" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6Csn6PeNjJlUG7g1r4Jb-4" value="IMAGEN DEL LANDING" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="90" width="660" height="870" as="geometry" />
+        </mxCell>
+        <mxCell id="6Csn6PeNjJlUG7g1r4Jb-5" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="1380" width="660" height="209" as="geometry" />
+        </mxCell>
+        <mxCell id="6Csn6PeNjJlUG7g1r4Jb-6" value="LOGO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Csn6PeNjJlUG7g1r4Jb-7" value="MENU HAMBURGUESA" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="15" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Csn6PeNjJlUG7g1r4Jb-9" value="INICIO DE SESIÓN" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Csn6PeNjJlUG7g1r4Jb-10" value="CONTACTO" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Csn6PeNjJlUG7g1r4Jb-11" value="DESCARGA DE APP" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Csn6PeNjJlUG7g1r4Jb-13" value="SECCIÓN 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1400" width="120" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="6Csn6PeNjJlUG7g1r4Jb-14" value="SECCIÓN 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="1400" width="120" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="6Csn6PeNjJlUG7g1r4Jb-15" value="INFO EXTRA" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1500" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Csn6PeNjJlUG7g1r4Jb-16" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="960" width="660" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="6Csn6PeNjJlUG7g1r4Jb-17" value="TÍTULO LANDING" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="95" y="180" width="470" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Csn6PeNjJlUG7g1r4Jb-18" value="TÍTULO DE DESCARGA DE APP" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="95" y="1030" width="470" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Csn6PeNjJlUG7g1r4Jb-20" value="IMAGEN DE IOS" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Csn6PeNjJlUG7g1r4Jb-21" value="IMAGEN DE ANDROID&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="1140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ko1_AHOuZ2F3lO5HHJ3E-1" value="NOMBRE DE EMPRESA" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="15" width="180" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="HjT3x2wcjAU4DibgQ7WI" name="TABLET">
+    <mxGraphModel dx="2390" dy="1327" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="660" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry width="850" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-2" value="IMAGEN DEL LANDING" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="90" width="850" height="870" as="geometry" />
+        </mxCell>
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="1380" width="850" height="209" as="geometry" />
+        </mxCell>
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-4" value="LOGO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-5" value="MENU HAMBURGUESA" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="15" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-6" value="INICIO DE SESIÓN" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="155" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-7" value="CONTACTO" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="375" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-8" value="DESCARGA DE APP" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="595" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-9" value="SECCIÓN 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1400" width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-10" value="SECCIÓN 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1400" width="175" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-11" value="INFO EXTRA" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="1500" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-12" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="960" width="850" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-13" value="TÍTULO LANDING" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="190" width="470" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-14" value="TÍTULO DE DESCARGA DE APP" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="127.5" y="1020" width="595" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-15" value="IMAGEN DE IOS" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-16" value="IMAGEN DE ANDROID&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="1140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Jya3-BUGMUdhAjY5BlOO-17" value="NOMBRE DE EMPRESA" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="15" width="180" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Xkwj1rBH4EhgQvLzjTql" name="ESCRITORIO">
+    <mxGraphModel dx="2206" dy="1225" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="660" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry width="1580" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-2" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;IMAGEN DEL LANDING&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="90" width="1580" height="870" as="geometry" />
+        </mxCell>
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="1380" width="1580" height="209" as="geometry" />
+        </mxCell>
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-4" value="LOGO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="15" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-5" value="MENU" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="15" width="910" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-6" value="INICIO DE SESIÓN" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="660" width="250" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-7" value="CONTACTO" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="660" width="250" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-8" value="DESCARGA DE APP" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="990" y="660" width="250" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-9" value="SECCIÓN 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="1400" width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-10" value="SECCIÓN 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1400" width="175" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-11" value="INFO EXTRA" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="1480" width="270" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-12" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="960" width="1580" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-13" value="TÍTULO LANDING" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="190" width="1220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-14" value="TÍTULO DE DESCARGA DE APP" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="512.5" y="1030" width="595" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-15" value="IMAGEN DE IOS" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="1169" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-16" value="IMAGEN DE ANDROID&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="1169" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="83QiMnl9hkEO72RdQ0lm-17" value="NOMBRE DE EMPRESA" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="15" width="180" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
