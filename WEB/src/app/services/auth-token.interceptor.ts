@@ -26,8 +26,7 @@ export class AuthTokenInterceptor implements HttpInterceptor {
         // console.log("INSERTA CABECERA");
         let jwtToken = request.clone({
           setHeaders: {
-            Authorization: `${token}`,
-            'ngrok-skip-browser-warning': '40'
+            Authorization: `${token}`
           }
         });
         return next.handle(jwtToken);
