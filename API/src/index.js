@@ -30,11 +30,11 @@ var corsOptions = {
 
 const app = express();
 
-app.use((req, res, next) => {
-  // Establecer la cabecera personalizada
-  res.setHeader("ngrok-skip-browser-warning", "2");
-  next();
-});
+// app.use((req, res, next) => {
+//   Establecer la cabecera personalizada
+//   res.setHeader("ngrok-skip-browser-warning", "2");
+//   next();
+// });
 
 app.use(cors(corsOptions));
 
