@@ -78,10 +78,8 @@
                   <input type="text" formControlName="nombre" class="form-control" id="nombreFormMembresia" aria-describedby="nameHelp"  placeholder="Nombre del nuevo planning"> -->
                   
 
-                  <mat-form-field appearance="outline">
-                    <mat-label>Nombre del nuevo planning</mat-label>
-                    <input matInput type="text" formControlName="nombre" class="form-control" id="nombreFormMembresia" aria-describedby="nameHelp"  placeholder="Nombre del nuevo planning">
-                  </mat-form-field>
+                    <label>Nombre del nuevo planning</label>
+                    <input  type="text" formControlName="nombre" class="form-control" id="nombreFormMembresia" aria-describedby="nameHelp"  placeholder="Nombre del nuevo planning">
                 </div>
   
               <div class="mb-1">
@@ -89,10 +87,8 @@
                   <input type="text" formControlName="descripcion" class="form-control" id="precioFormMembresia" aria-describedby="precioHelp"  placeholder="Descripción"> -->
                   
 
-                  <mat-form-field appearance="outline">
-                    <mat-label>Descripción</mat-label>
-                    <input matInput type="text" formControlName="descripcion" class="form-control" id="precioFormMembresia" aria-describedby="precioHelp"  placeholder="Descripción">
-                  </mat-form-field>
+                    <label>Descripción</label>
+                    <input type="text" formControlName="descripcion" class="form-control" id="precioFormMembresia" aria-describedby="precioHelp"  placeholder="Descripción">
                 </div>
 
                 <!-- <div class="mb-3">
@@ -162,7 +158,7 @@
       <ng-template #noSolicitudes>
        
       <!-- ACORDEON SOLICITUDES -->
-      <mat-accordion class="example-headers-align" multi  >
+      <mat-accordion class="example-headers-align m-3" multi  >
       
         <mat-expansion-panel (opened)="panelOpenState = true"
         (closed)="panelOpenState = false" *ngFor="let item of solicitudes"[ngClass]="{
@@ -180,7 +176,7 @@
       </mat-expansion-panel-header>
       <p>{{item.mensaje}}</p>
         <p>Estado: {{item.estado}}</p>
-      <button color="success" mat-fab aria-label="DONE" (click)="checkDone(item)" >
+      <button  mat-fab color="primary" aria-label="DONE" (click)="checkDone(item)" >
          <i class="material-icons">thumb_up</i>
       </button>
       <button mat-fab color="warn" aria-label="REFUSE"  (click)="refuse(item)" >

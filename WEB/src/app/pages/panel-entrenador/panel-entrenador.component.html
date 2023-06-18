@@ -80,23 +80,13 @@
             <form [formGroup]="addRutinaForm" (ngSubmit)="onSubmit()" class="d-flex justify-content-center flex-column align-items-center"> 
     
                 <div class="mb-1">
-                    <!-- <label for="nombreFormMembresia" class="form-label">Nombre de la nueva rutina</label> -->
-                    <!-- <input type="text" formControlName="nombre" class="form-control" id="nombreFormMembresia" aria-describedby="nameHelp"  placeholder="Nombre de la nueva rutina"> -->
-                    <mat-form-field appearance="outline">
-                  <mat-label>Nombre de rutina</mat-label>
-                  <input matInput type="text" formControlName="nombre" class="form-control" id="nombreFormMembresia" aria-describedby="nameHelp"  placeholder="Nombre de la nueva rutina">
-                </mat-form-field>
+                    <label for="nombreFormMembresia" class="form-label">Nombre de rutina</label> 
+                    <input type="text" formControlName="nombre" class="form-control" id="nombreFormMembresia" aria-describedby="nameHelp"  placeholder="Nombre de la nueva rutina"> 
                   </div>
     
                 <div class="mb-1">
-                    <!-- <label for="precioFormMembresia" class="form-label">Descripción</label>
-                    <input type="text" formControlName="descripcion" class="form-control" id="precioFormMembresia" aria-describedby="precioHelp"  placeholder="Descripción"> -->
-                    
-
-                    <mat-form-field appearance="outline">
-                      <mat-label>Descripción</mat-label>
-                      <input matInput type="text" formControlName="descripcion" class="form-control" id="precioFormMembresia" aria-describedby="Descripción"  placeholder="Descripción">
-                    </mat-form-field>
+                      <label>Descripción</label>
+                      <input  type="text" formControlName="descripcion" class="form-control" id="precioFormMembresia" aria-describedby="Descripción"  placeholder="Descripción">
                   </div>
 
                     <!-- <div class="mb-3">
@@ -166,7 +156,7 @@
           <h1>NO HAY DATOS</h1>
         </div>
         <ng-template #noSolicitudes>
-        <mat-accordion class="example-headers-align" multi  >
+        <mat-accordion class="example-headers-align m-3" multi  >
       
           <mat-expansion-panel (opened)="panelOpenState = true"
           (closed)="panelOpenState = false" *ngFor="let item of solicitudes"[ngClass]="{
@@ -184,7 +174,7 @@
         </mat-expansion-panel-header>
         <p>{{item.mensaje}}</p>
         <p>Estado: {{item.estado}}</p>
-        <button color="success" mat-fab aria-label="DONE" (click)="checkDone(item)" >
+        <button color="primary" mat-fab aria-label="DONE" (click)="checkDone(item)" >
           <i class="material-icons">thumb_up</i>
         </button>
         <button mat-fab color="warn" aria-label="REFUSE"  (click)="refuse(item)" >
